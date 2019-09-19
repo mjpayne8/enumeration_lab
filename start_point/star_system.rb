@@ -33,5 +33,8 @@ class StarSystem
     return planet_names
   end
 
-  
+  def get_number_of_planets_closer_than(distance_in_million)
+    return @planets.find_all {|planet| planet.distance_from_sun < distance_in_million}.length()
+  end
+
 end
