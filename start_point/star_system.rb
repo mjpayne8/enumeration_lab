@@ -49,4 +49,11 @@ class StarSystem
 
   end
 
+  def get_planet_names_sorted_by_size_decreasing()
+    sorted_planets = @planets.sort {|planet_1, planet_2| -planet_1.diameter<=> -planet_2.diameter}
+    planet_names = []
+    sorted_planets.each {|planet| planet_names.push(planet.name)}
+    return planet_names
+  end
+
 end
